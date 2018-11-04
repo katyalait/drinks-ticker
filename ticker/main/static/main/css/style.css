@@ -1,0 +1,120 @@
+/*** { box-sizing: border-box; }
+$duration: 30s;
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background-color: rgb(0,0,0);
+  padding-left: 100%;
+  box-sizing: content-box;
+
+  .ticker {
+
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+   -webkit-animation-name: ticker;
+    -webkit-animation-duration: $duration;
+
+    &__item {
+
+      display: inline-block;
+
+      padding: 0 2rem;
+      font-size: 2rem;
+      color: white;
+
+    }
+
+  }
+
+}
+
+**/
+#controller {
+    box-sizing: border-box;
+    background-color: #06C;
+    position: absolute;
+    width: 100%;
+    overflow:hidden;
+}
+#controller:hover #ticker {
+    -webkit-animation-play-state: paused
+}
+#ticker {
+    white-space: nowrap;
+    -webkit-animation: move_eye 25s linear 0s infinite normal;
+}
+@-webkit-keyframes move_eye {
+    from {
+        -webkit-transform: translate(100%,0)
+    }
+    to {
+        -webkit-transform: translate(-100%,0)
+    }
+    90% {
+    }
+}
+.text {
+    display:inline-block;
+}
+.tweet {
+    box-sizing: border-box;
+    background-color: #EEE;
+    display: inline-block;
+    border-radius:5px;
+    padding: 5px 10px;;
+    vertical-align: top;
+    margin: 5px 2px;
+    height: 100%;
+}
+.tweet:hover .extra_info {
+    display: inline;
+}
+.extra_info {
+    display: none;
+}
+img {
+    display:inline-block;
+    height: 30px;
+}
+
+
+body { padding-bottom: 5rem; }
+h1,h2,p {padding: 0 5%;}
