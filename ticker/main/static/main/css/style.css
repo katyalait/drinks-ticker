@@ -69,7 +69,7 @@ $duration: 30s;
 **/
 #controller {
     box-sizing: border-box;
-    background-color: #06C;
+    background-color: #2a7bfc;
     position: absolute;
     width: 100%;
     overflow:hidden;
@@ -92,11 +92,15 @@ $duration: 30s;
     }
 }
 .text {
+    color: white;
+    font-size: 18px;
     display:inline-block;
+    margin: 5px 2px;
+    padding: 5px 10px;;
 }
 .tweet {
     box-sizing: border-box;
-    background-color: #EEE;
+    background-color: #2a7bfc;
     display: inline-block;
     border-radius:5px;
     padding: 5px 10px;;
