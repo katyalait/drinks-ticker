@@ -8,12 +8,21 @@
     <title>Ticker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    {% load jchart %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <!-- <link rel="stylesheet" type="text/css" href="/static/main/css/style.css" /> -->
   </head>
   <body>
     <h1>Ticker Test</h1>
-    <h2>Graph and shit goes here</h2>
+    <div class="container">
+    <div class="row" id = "ticker_row">
+      <div class="col-sm-7">
+      {% render_chart 'scatter_line_chart' %}
+    </div>
+    <div class="col-sm-5" id="commentary">
+
+    </div>
+  </div>
   <!--  <div class="ticker-wrap">
       <div class="ticker">
         <div class="ticker__item">Letterpress chambray brunch.</div>
@@ -21,6 +30,8 @@
         <div class="ticker__item">Ugh PBR&B kale chips Echo Park.</div>
         <div class="ticker__item">Gluten-free mumblecore chambray mixtape food truck. </div>
       </div> -->
+      <div class="row"><div> </div> </div>
+      <div class="row">
       <div id="controller">
         <div id="ticker">
           <div class="text">
@@ -67,5 +78,11 @@
           </div>
         </div>
     </div>
+
+</div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
   </body>
 </html>

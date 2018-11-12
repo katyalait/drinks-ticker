@@ -2,9 +2,12 @@
 #controller {
     box-sizing: border-box;
     background-color: #2a7bfc;
-    position: fixed;
+    position: absolute;
     width: 100%;
     overflow: hidden;
+    left:-0px;
+
+
 }
 #ticker {
     white-space: nowrap;
@@ -58,7 +61,10 @@ img {
     display:inline-block;
     height: 30px;
 }
-
-
-body { padding-bottom: 5rem; }
+#commentary {
+  background-color: grey;
+  width:100%;
+  right:-40px;
+}
+body { padding-bottom: 5rem; background-color: black;}
 h1,h2,p {padding: 0 5%;}
