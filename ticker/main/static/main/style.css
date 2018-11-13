@@ -2,9 +2,11 @@
 #controller {
     box-sizing: border-box;
     background-color: #2a7bfc;
-    position: relative;
+    position: absolute;
     width: 100%;
     overflow: hidden;
+    left:-0px;
+
 
 }
 #ticker {
@@ -14,7 +16,7 @@
 }
 @-webkit-keyframes move_eye {
    from {
-        -webkit-transform: translate(150%,0)
+        -webkit-transform: translate(100%,0)
     }
     to {
         -webkit-transform: translate(-165%,0)
@@ -37,14 +39,14 @@
     font-size: 18px;
     display:inline-block;
     margin: 5px 2px;
-    padding: 5px 10px;;
+    padding: 5px 10px;
 }
 .tweet {
     box-sizing: border-box;
     background-color: #2a7bfc;
     display: inline-block;
     border-radius:5px;
-    padding: 5px 10px;;
+    padding: 5px 10px;
     vertical-align: top;
     margin: 5px 2px;
     height: 100%;
@@ -59,7 +61,26 @@ img {
     display:inline-block;
     height: 30px;
 }
+#commentary {
+  background-color: grey;
+  width:100%;
+  right:-40px;
+}
+#cover {
+  height:200px;
+  background:ivory;
+  background-image: url('https://raw.githubusercontent.com/ktlait/drinks-ticker/master/ticker/images/Everleigh%202.jpg');
+  background-size:cover;
+}
+#logo {
+  width:400px;
+  height:200px;
+  position: relative;
+  left:30%;
+}
 
-
-body { padding-bottom: 5rem; }
+#comment {
+  border-width: 3px;
+}
+body { padding-bottom: 5rem; background-color:#0b1628;}
 h1,h2,p {padding: 0 5%;}
