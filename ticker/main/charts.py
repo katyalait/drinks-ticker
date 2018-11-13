@@ -10,7 +10,7 @@ class ScatterLineChart(Chart):
     }
 
     def get_datasets(self, **kwargs):
-        time_set = ['2018-11-14 21:00:00', '2018-11-14 21:20:00', '2018-11-14 21:40:00', '2018-11-14 22:00:00', '2018-11-14 22:20:00', '2018-11-14 22:40:00', '2018-11-14 23:00:00']
+        time_set = ['2018-11-14 21:00', '2018-11-14 21:20', '2018-11-14 21:40', '2018-11-14 22:00', '2018-11-14 22:20', '2018-11-14 22:40', '2018-11-14 23:00']
         fosters = []
         g_and_t = []
         captain_morgan = []
@@ -33,12 +33,20 @@ class ScatterLineChart(Chart):
         local_hour = localtime.tm_hour
         local_minute = localtime.tm_min
 
+        for curtime in time_set2:
+            if local_hour>=curtime['hour'] and local_minute>=curtime['minute']:
+                interval = time_set2.index(curtime)
+        #if (local_hour >= time_set2[0]['hour']):
+        #    current_minute = time_set2[0]['minute']
+        #    while(local_minute>current_minute):
+        #        current_minute += 1
+        #        if ()
         current_time = time_set2[interval]
         if interval!=max_interval:
             next_time = time_set2[interval+1]
             if local_hour==next_time['hour'] and local_minute==next_time['minute']:
-                interval = interval +1
-                
+                interval = interval+1
+
         for price in prices:
             if price.interval_index<=interval:
                 fosters.append({'y' : price.foster, 'x': time_set[int(price.interval_index)] })
